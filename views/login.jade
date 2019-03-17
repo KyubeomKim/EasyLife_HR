@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  form(action='/login', method='post')
+    p
+      label 사번
+      input(type='text', name='id')
+    p
+      label 생년월일
+      input(type='text', name='birthday')
+    p
+      input(type='submit', value='로그인')
+     

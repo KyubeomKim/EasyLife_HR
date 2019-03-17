@@ -1,21 +1,82 @@
-form(action='/calculate', method='post')
-    table
-        thead
-        tbody
-        tr
-            td 이름
-            td 배분액
-            td 실배분액
-            td 정산액
-        - for (var i = 0; i < params.length; i++)
-         tr
-            td=params[i].name
-            td=params[i].money
-            td 
-              input(type='text', name='player'+(i))
-            td=params[i].difference
-        tr
-            td 파일 이름
-            td 
-              input(type='text', name='filename')
-    input(type='submit', value="Let's destory friendship!")
+extends layout
+
+block content
+  table
+    thead
+    tbody
+    tr
+      td 사번:
+      td=interviewer.id
+      td 이름: 
+      td=interviewer.name
+      td 소속: 
+      td=interviewer.div
+  
+  table
+    thead
+    tbody
+    tr
+      td 지원자 No:
+      td A001
+      td 평가완료: 
+      td N
+  
+  br
+  br
+  br
+  - for (var i = 0; i < params.length; i++)
+    .panel.panel-default
+    .panel-heading=params[i].label
+    - for (var j = 0; j < params[i].data.length; j++)
+      .panel-body=params[i].data[j].question
+        br
+        br
+        textarea.form-control.z-depth-1(rows='7', readonly)=params[i].data[j].answer
+        //- input(type='text', class="form-control", name='test', value=params[i].data[j].answer, readonly) 
+    br
+    br
+    | 평가 점수
+    br
+    .btn-group(data-toggle='buttons')
+      label.btn.btn-default
+        input(type='radio', autocomplete='off')
+        | 1
+      label.btn.btn-default
+        input(type='radio', autocomplete='off')
+        | 2
+      label.btn.btn-default
+        input(type='radio', autocomplete='off')
+        | 3
+      label.btn.btn-default
+        input(type='radio', autocomplete='off')
+        | 4
+      label.btn.btn-default
+        input(type='radio', autocomplete='off')
+        | 5
+    br
+    br
+
+        
+    
+
+//- form(action='/calculate', method='post')
+//-     table
+//-         thead
+//-         tbody
+//-         tr
+//-             td 이름
+//-             td 배분액
+//-             td 실배분액
+//-             td 정산액
+//-         - for (var i = 0; i < params.length; i++)
+//-          tr
+//-             td=params[i].name
+//-             td=params[i].money
+//-             td 
+//-               input(type='text', name='player'+(i))
+//-             td=params[i].difference
+//-         tr
+//-             td 파일 이름
+//-             td 
+//-               input(type='text', name='filename')
+//-     input(type='submit', value="Let's destory friendship!")

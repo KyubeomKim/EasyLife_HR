@@ -1,0 +1,61 @@
+{
+    "title": "2019 상반기 신입사원 공채 서류전형",
+    "interviewer":[
+        {
+            "id": "09239",
+            "name": "김규범",
+            "div": "플랫폼&Tech1그룹",
+            "birthday": "920408",
+            "scoring_type": ["A"], 
+            "scoring_item": ["all"],
+            "scoring_range": [2,101]
+        },
+        {
+            "id": "09123",
+            "name": "권순우",
+            "div": "HR담당",
+            "birthday": "890408",
+            "scoring_type": ["A"], 
+            "scoring_item": [1,2,3],
+            "scoring_range": [1,100]
+        }
+    ],
+    "scoring":[
+        {
+            "label": "1번문항",
+            "data_to_display": ["E"]
+        },
+        {
+            "label": "2번문항",
+            "data_to_display": ["F"]
+        },
+        {
+            "label": "3번문항",
+            "data_to_display": ["G"]
+        },
+        {
+            "label": "3번문항 상세내용 1",
+            "data_to_display": ["H"]
+        },
+        {
+            "label": "3번문항 상세내용 2",
+            "data_to_display": ["I","J"]
+        },
+        {
+            "label": "3번문항 상세내용 3",
+            "data_to_display": ["K","L"]
+        },
+        {
+            "label": "3번문항 상세내용 4",
+            "data_to_display": ["M","N"]
+        },
+        {
+            "label": "3번문항 상세내용 5",
+            "data_to_display": ["O","P"]
+        },
+        {
+            "label": "3번문항 전체",
+            "data_to_display": []
+        }
+    ]
+}
